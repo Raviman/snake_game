@@ -118,7 +118,7 @@ function draw(){
     pen.drawImage(trophy, 22, 22, cell_size, cell_size);
 
     pen.fillStyle = "blue";
-    pen.font = "30px Roboto"
+    pen.font = "23px Roboto"
     pen.fillText(score,50,50);
 }
 

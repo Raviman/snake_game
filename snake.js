@@ -1,13 +1,13 @@
 
 function init(){
     var canvas = document.getElementById('mycanvas');
-    W = canvas.width = 2050;
+    W = canvas.width = 2000;
     H = canvas.height = 900;
     pen = canvas.getContext('2d');
     cell_size = 67;
     food = getRandomFood();
     gameover = false;
-    score = 5;
+    score = 3;
 
     food_img = new Image();
     food_img.src = "assets/apple1.png";
@@ -16,7 +16,7 @@ function init(){
     trophy.src = "assets/trophy.png";
 
     snake = {
-        init_len : 5,
+        init_len : 3,
         color : "solid blue",
         cells : [],
         direction : "right",
@@ -115,10 +115,10 @@ function draw(){
     pen.fillStyle = food.color;
     pen.drawImage(food_img, food.x*cell_size, food.y*cell_size, cell_size, cell_size);
     
-    pen.drawImage(trophy, 20, 20, cell_size, cell_size);
+    pen.drawImage(trophy, 22, 22, cell_size, cell_size);
 
     pen.fillStyle = "blue";
-    pen.font = "20px Roboto"
+    pen.font = "30px Roboto"
     pen.fillText(score,50,50);
 }
 
@@ -150,4 +150,4 @@ function gameloop(){
 
 init();
 
-var f = setInterval(gameloop, 200);
+var f = setInterval(gameloop, 135);
